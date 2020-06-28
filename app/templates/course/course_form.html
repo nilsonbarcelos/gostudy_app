@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load my_filters %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ course_form.name.errors }}
+        <label>Name: </label>
+        {{ course_form.name|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ course_form.description.errors }}
+        <label>Description: </label>
+        {{ course_form.description|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ course_form.start_date.errors }}
+        <label>Start date: </label>
+        {{ course_form.start_date|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ course_form.end_date.errors }}
+        <label>End date: </label>
+        {{ course_form.end_date|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ course_form.duration_time.errors }}
+        <label>Duration time: </label>
+        {{ course_form.duration_time|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ course_form.units.errors }}
+        <label>Units: </label>
+        {{ course_form.units|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ course_form.units_done.errors }}
+        <label>Units done: </label>
+        {{ course_form.units_done|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ course_form.type_course.errors }}
+        <label>Type course: </label>
+        {{ course_form.type_course|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ course_form.status_course.errors }}
+        <label>Status course: </label>
+        {{ course_form.status_course|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save">
+    </div>
+</form>
+
+{% endblock content %}

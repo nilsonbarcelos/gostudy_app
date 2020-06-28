@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="card-header">
+        Are you sure to delete this course?
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ course.name }}</h5>
+        <p class="card-text">{{ course.description }}</p>
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

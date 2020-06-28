@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Course List</h1>
+{% for course in courses%}
+<div class="card mb-3">
+    <div class="card-header">
+        {{ course.get_status_course_display}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ course.name }}</h5>
+        <p class="card-text">{{ course.description }}</p>
+        <hr>
+        <a href="{% url 'edit_course' course.id %}">Edit course</a>
+        <a href="{% url 'delete_course' course.id %}">Delete course</a>
+    </div>
+</div>
+{% endfor%}
+<a href="{% url 'add_course' %}"><input type="button" class="btn btn-primary mb-3" value="Add course"></a>
+{% endblock content %}
