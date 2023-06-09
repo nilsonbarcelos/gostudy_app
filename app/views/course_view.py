@@ -57,7 +57,7 @@ def edit_course(request, id):
                             end_date=end_date, duration_time=duration_time, units=units,
                             units_done=units_done, type_course=type_course, status_course=status_course,
                             user=request.user)
-        course_service.edit_course(new_course)
+        course_service.edit_course(db_course, new_course)
         return redirect("course_list")
     return render(request, "course/course_form.html", {"course_form": course_form})
 
