@@ -5,7 +5,7 @@ Gostudy is a to-do list developed with the Django framework.
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
 | :sparkles: Nome        | **GOSTUDY**
-| :label: Tecnologias | Python, Django Framework
+| :label: Tecnologias | Python, Django Framework, HTML
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![](app/static/app/assets/images/gostudy.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
